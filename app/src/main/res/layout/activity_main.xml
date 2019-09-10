@@ -6,37 +6,53 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/tvSimpan"
-        android:layout_width="0dp"
+    <HorizontalScrollView
+        android:id="@+id/containerSimpan"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
-        android:gravity="right"
-        android:textSize="24sp"
-        tools:text="10+5+"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent" >
 
-    <TextView
-        android:id="@+id/tvHasil"
-        android:layout_width="0dp"
+        <TextView
+            android:id="@+id/tvSimpan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:layout_gravity="right"
+            android:textSize="24sp"
+            tools:text="10+5+"/>
+
+    </HorizontalScrollView>
+
+    <HorizontalScrollView
+        android:id="@+id/containerHasil"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
-        android:gravity="right"
-        android:textSize="48sp"
-        tools:text="10"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvSimpan" />
+        app:layout_constraintTop_toBottomOf="@+id/containerSimpan" >
+
+        <TextView
+            android:id="@+id/tvHasil"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:layout_gravity="right"
+            android:textSize="48sp"
+            tools:text="123456789012345678901234567890"/>
+
+    </HorizontalScrollView>
 
     <LinearLayout
         android:id="@+id/linearLayout2"
@@ -50,7 +66,7 @@
         app:layout_constraintHorizontal_weight="0.75"
         app:layout_constraintStart_toEndOf="@+id/linearLayout"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvHasil">
+        app:layout_constraintTop_toBottomOf="@+id/containerHasil">
 
         <LinearLayout
             android:layout_width="match_parent"
